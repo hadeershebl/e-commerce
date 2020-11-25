@@ -6,6 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
 
     <title>Food</title>
 
@@ -68,16 +69,6 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
          
-          {{-- add product --}}
-          <li class="nav-item">
-            <a href="{{Route('show-add-product-page')}}" class="nav-link">
-              <i class="nav-icon fas fa-plus-circle"></i>
-              <p>
-                Add new Products
-              </p>
-            </a>
-          </li>
-
           {{-- view product --}}
           <li class="nav-item">
             <a href="{{ route('sellerHome')}}" class="nav-link">
@@ -88,9 +79,19 @@
             </a>
           </li>
 
+          {{-- add product --}}
+          <li class="nav-item">
+            <a href="{{Route('show-add-product-page')}}" class="nav-link">
+              <i class="nav-icon fas fa-plus-circle"></i>
+              <p>
+                Add new Products
+              </p>
+            </a>
+          </li>
+
           {{-- manage products --}}
           <li class="nav-item">
-            <a href="../calendar.html" class="nav-link">
+            <a href="{{ route('manage_page')}}" class="nav-link">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
                 Manage products
@@ -177,5 +178,7 @@
 <script src="{{asset('ui/dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('ui/dist/js/demo.js')}}"></script>
+
+  @yield('script')
 </body>
 </html>

@@ -57,12 +57,12 @@
               </div>
             <div class="form-group">
               <label for="inputStatus">Type</label>
-              <select id="inputStatus" class="form-control custom-select">
+              <select id="inputStatus" class="form-control custom-select" name="type">
                 <option selected disabled>Select one</option>
-                <option>Meal</option>
-                <option>Fries</option>
-                <option>Sandwich</option>
-                <option>Pizza</option>
+                <option value="meal">Meal</option>
+                <option value="fries">Fries</option>
+                <option value="sandwich">Sandwich</option>
+                <option value="pizza">Pizza</option>
               </select>
             </div>
             <div class="form-group">

@@ -17,7 +17,10 @@ class SellerController extends Controller
     
     public function index()
     {
-        return view('seller.home');
+        $id =Auth::guard('seller')->user()->id;
+        $seller_products  = Seller::findOrFail($id)->products()->orderBy('created_at', 'desc')->get(); 
+        
+        return view('seller.home' , ['products' => $seller_products]);
     }
 
     public function login()

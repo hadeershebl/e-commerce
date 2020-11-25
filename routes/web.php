@@ -47,9 +47,11 @@ Route::prefix('seller')->group(function(){
     Route::get('/', 'SellerController@index')->middleware('auth:seller')->name('sellerHome');
 
     Route::get('/addProduct', 'SellerController@show_add_product_page')->name('show-add-product-page');
-    Route::post('/addProduct', 'SellerController@add_product')->name('add-new-product');
+    Route::post('/addProduct', 'ProductController@add')->name('add-new-product');
     
-    
+    Route::get('/manage-Products' , 'ProductController@show_manage_page')->name('manage_page');
+    Route::get('/manage-Products/edit' , 'ProductController@show_edit_page')->name('edit_page');
+    Route::delete('/manage-Products/delete/{id}' , 'ProductController@destroy')->name('delete_product');
 
     }
 );
