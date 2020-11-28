@@ -2,7 +2,7 @@
 
 @section('content')
  <!-- Content Header (Page header) -->
- {{------------- add new tweet section ------------}}
+ {{------------- edit product section ------------}}
 <div class="modal fade " id="modalProductEdit" tabindex="-1"
   aria-labelledby="myModalLabel" aria-hidden="true">
 <form action="" method="POST">
@@ -98,7 +98,7 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-        </div>
+          </div>
           @if (session('add_prod') != null) 
           <div class="alert alert-success alert-dismissible fade show" role="alert">
               <strong>{{ session('add_prod')}}</strong>
